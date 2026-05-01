@@ -5,21 +5,21 @@
 class AgentRunner < Formula
   desc "CLI workflow orchestrator for AI agents"
   homepage "https://github.com/Codagent-AI/agent-runner"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Codagent-AI/agent-runner/releases/download/v0.2.0/agent-runner_darwin_amd64.tar.gz"
-      sha256 "847cc324545269a5d4174ab269391a1cf935ead72b5f80fbe858270f7f0de9e3"
+      url "https://github.com/Codagent-AI/agent-runner/releases/download/v0.3.0/agent-runner_darwin_amd64.tar.gz"
+      sha256 "99212c57c222caf5e9cbbb8425a006fb889a825f269f609a6f737fe0fc4fb815"
 
       define_method(:install) do
         bin.install "agent-runner"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Codagent-AI/agent-runner/releases/download/v0.2.0/agent-runner_darwin_arm64.tar.gz"
-      sha256 "0ee9534deca433b91bbf3dd4ec87003a01d9d133a10d03f91514b1a9e07089bd"
+      url "https://github.com/Codagent-AI/agent-runner/releases/download/v0.3.0/agent-runner_darwin_arm64.tar.gz"
+      sha256 "9d07d29c93508af4d32f5c78adee6d5f3136948a03877bf63672afc7d337ab92"
 
       define_method(:install) do
         bin.install "agent-runner"
@@ -29,15 +29,15 @@ class AgentRunner < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Codagent-AI/agent-runner/releases/download/v0.2.0/agent-runner_linux_amd64.tar.gz"
-      sha256 "2f997d282a12afeb01c9b515f4d5b335592ea666ddc9575b5123d56d575dcf65"
+      url "https://github.com/Codagent-AI/agent-runner/releases/download/v0.3.0/agent-runner_linux_amd64.tar.gz"
+      sha256 "16511495e6d7d9569004a769c670f7a4584b19b9b4d6adf45dfcb40e4d5b8a75"
       define_method(:install) do
         bin.install "agent-runner"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Codagent-AI/agent-runner/releases/download/v0.2.0/agent-runner_linux_arm64.tar.gz"
-      sha256 "85660b89fafcb54d525d288405d3103047bf5bc1b1d1be24bd2bb2670abc1323"
+      url "https://github.com/Codagent-AI/agent-runner/releases/download/v0.3.0/agent-runner_linux_arm64.tar.gz"
+      sha256 "4957de9cb9c64964b513e05ef53ab47d058d410159143623ee612c1674b524cb"
       define_method(:install) do
         bin.install "agent-runner"
       end
