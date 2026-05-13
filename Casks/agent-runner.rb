@@ -32,6 +32,7 @@ cask "agent-runner" do
     skip "Auto-generated on release."
   end
   depends_on formula: [
+      "agent-plugin",
       "agent-validator",
     ]
 
