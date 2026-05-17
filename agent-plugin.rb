@@ -4,9 +4,9 @@
 class AgentPlugin < Formula
   desc "Install agent plugins through native CLIs with skills fallback"
   homepage "https://github.com/Codagent-AI/agent-plugin"
-  url "https://registry.npmjs.org/@codagent-ai/agent-plugin/-/agent-plugin-0.1.2.tgz"
-  sha256 "a9ec0b7560795c0820bd3cc3cf8b9c950a0f88d468730116b2807d561a4da5f8"
-  version "0.1.2"
+  url "https://registry.npmjs.org/@codagent-ai/agent-plugin/-/agent-plugin-0.1.3.tgz"
+  sha256 "fc147a041745b9e06bc73eed89bdea6df592df3caecdb5e935d85d56963eabd9"
+  version "0.1.3"
   license "MIT"
 
   depends_on "node"
