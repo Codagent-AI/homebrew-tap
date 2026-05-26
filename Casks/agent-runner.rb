@@ -31,19 +31,22 @@ cask "agent-runner" do
   livecheck do
     skip "Auto-generated on release."
   end
+
   depends_on formula: [
-      "agent-plugin",
-      "agent-validator",
-    ]
+    "agent-plugin",
+    "agent-validator",
+  ]
 
   binary "agent-runner"
 
+  preflight do
+    system_command ENV.fetch("HOMEBREW_BREW_FILE", "brew"),
+                   args: ["upgrade", "--formula", "agent-plugin", "agent-validator"]
+  end
+
   postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/agent-runner"]
-    end
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/agent-runner"] if OS.mac?
   end
 
   # No zap stanza required
-
 end
