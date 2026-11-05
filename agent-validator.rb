@@ -5,9 +5,9 @@
 class AgentValidator < Formula
   desc "CLI tool for validating AI coding agents"
   homepage "https://github.com/Codagent-AI/agent-validator"
-  url "https://registry.npmjs.org/agent-validator/-/agent-validator-1.15.0.tgz"
-  sha256 "874c2a28aa4bb14769cad6c9c6571e10599085752c3a65d9f4cff42208b38c47"
-  version "1.15.0"
+  url "https://registry.npmjs.org/agent-validator/-/agent-validator-1.16.0.tgz"
+  sha256 "95fafaf41028e9f75a2933d5eb9c969f17f7efe8ac57e1c3df2ae7b4dc3e448e"
+  version "1.16.0"
   license "MIT"
 
   depends_on "node"
